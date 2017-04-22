@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 
-using System.Runtime.CompilerServices;
+using System.Text;
 
 
 namespace Ecore
@@ -24,6 +24,16 @@ namespace Ecore
         public async Task check(HttpContext context)
         {
             await context.Response.WriteAsync("ok");
+        }
+
+        public async Task config(HttpContext context)
+        {
+            string key = (string)context.GetRouteData().Values["key"];
+            var value = GetConfig(key).ToString();
+            // Encoding.UTF8
+            
+            
+            await context.Response.WriteAsync(get_uft8(value));
         }
 
         public async Task index(HttpContext context)

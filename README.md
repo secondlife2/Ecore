@@ -4,7 +4,7 @@
 ### 部署
 > step 1：安装Net.Croe，请参照官网 https://www.microsoft.com/net/core
 
-> step 2：进入项目根目录，执行 dotnet restore（拉取相关依赖）
+> step 2：进入项目根目录，执行 dotnet restore（还原各种依赖包）
 
 > step 3：执行 dotnet run
 
@@ -20,6 +20,7 @@
 * 路由分组
 * 过滤器
 * html模版
+* log
 
 
 

@@ -12,6 +12,7 @@ namespace Ecore
                 new RouteModel{ method = "GET", patch = "index", handler = _controller.index },
                 new RouteModel{ method = "GET", patch = "check", handler = _controller.check },
                 new RouteModel{ method = "GET", patch = "user/{id}", handler = _controller.user },
+                new RouteModel{ method = "GET", patch = "config/{key}", handler = _controller.config },
             };
 
             return list;
